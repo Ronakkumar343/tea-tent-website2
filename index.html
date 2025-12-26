@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Tent Restaurant | Al Arabi Sports Club, Doha</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tea Tent Restaurant at Al Arabi Sports Club, Doha. Serving budget-friendly Asian cuisine, Zinger Club sandwiches, Poratta, and fresh juices. Dine-in, takeout, and delivery available.">
+    <meta name="keywords" content="Tea Tent Restaurant, Doha restaurants, Al Arabi Sports Club food, Zinger Club Doha, best tea Doha, budget dining Qatar, Asian food Doha">
+    <meta name="author" content="Tea Tent Restaurant">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:url" content="https://teatentdoha.com/">
+    <meta property="og:title" content="Tea Tent Restaurant - Delicious Asian Bites in Doha">
+    <meta property="og:description" content="Visit us at Al Arabi Sports Club for the best Zinger Clubs, Porattas, and Fresh Juices in town. Open late!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Favicon (Using Emoji as Icon for simplicity in this file) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛺</text></svg>">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Analytics (Placeholder) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        // gtag('config', 'UA-XXXXXXXXX-X'); // Uncomment and add your ID
+    </script>
+
+    <!-- JSON-LD Schema for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Tea Tent Restaurant",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+      "@id": "https://teatentdoha.com",
+      "url": "https://teatentdoha.com",
+      "telephone": "+97459992270",
+      "priceRange": "QAR 1-50",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Al Arabi Sports Club, New Salata",
+        "addressLocality": "Doha",
+        "addressRegion": "Doha",
+        "postalCode": "00000",
+        "addressCountry": "QA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.2667, 
+        "longitude": 51.5167 
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "06:00",
+        "closes": "01:00"
+      },
+      "servesCuisine": ["Asian", "Fast Food", "Cafeteria", "Beverages"]
+    }
+    </script>
+
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary-color: #ff6b35; /* Appetizing Orange */
+            --secondary-color: #2d3748; /* Dark Grey */
+            --accent-color: #f7fafc; /* Light Grey BG */
+            --text-color: #4a5568;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Components --- */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+        }
+
+        /* --- Header / Navigation --- */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 0;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
+        /* --- Features Section --- */
+        #about {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-box {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /* --- Menu Section --- */
+        #menu {
+            padding: 80px 0;
+            background-color: var(--accent-color);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            padding: 20px;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .menu-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .menu-price {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .menu-desc {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        /* --- Reviews Section --- */
+        #reviews {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .rating-summary {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .big-rating {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .stars {
+            color: #f6ad55;
+            margin: 10px 0;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background-color: var(--accent-color);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .reviewer {
+            font-weight: 600;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .reviewer i {
+            margin-right: 10px;
+            color: #cbd5e0;
+        }
+
+        /* --- Gallery Section --- */
+        #gallery {
+            padding: 80px 0;
+            background-color: var(--accent-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.03);
+            filter: brightness(0.9);
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            padding: 80px 0;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                right: -100%;
+                top: 80px;
+                height: calc(100vh - 80px);
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Tea<span>Tent</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact" class="btn">Contact Us</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="price-badge">Avg QAR 1–50 per person</span>
+                <h1>Taste of Arabia & Asia <br>in Doha</h1>
+                <p>Located inside Al Arabi Sports Club. Serving the famous Zinger Club, Karak Tea, and budget-friendly bites late into the night.</p>
+                <a href="#menu" class="btn">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Features Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <span></span>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>No-contact delivery available for your safety and convenience.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Budget Friendly</h3>
+                    <p>Delicious meals that are easy on your wallet. Most items under QAR 20.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-moon"></i>
+                    <h3>Open Late</h3>
+                    <p>Craving a midnight snack? We serve fresh food until 1:00 AM.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Great Location</h3>
+                    <p>Conveniently located inside Al Arabi Sports Club with ample parking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Popular Dishes</h2>
+                <span></span>
+            </div>
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Club Sandwich" class="menu-img">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Zinger Club</span>
+                            <span class="menu-price">QAR 18</span>
+                        </div>
+                        <p class="menu-desc">Triple-layered sandwich with crispy zinger chicken, cheese, veggies, and special sauce. Served with fries.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Chicken Curry and Poratta" class="menu-img">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Chicken Curry & Poratta</span>
+                            <span class="menu-price">QAR 12</span>
+                        </div>
+                        <p class="menu-desc">Authentic spicy chicken curry served with flaky, freshly made Kerala porattas.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Fried Chicken" class="menu-img">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Chicken Fry</span>
+                            <span class="menu-price">QAR 15</span>
+                        </div>
+                        <p class="menu-desc">Crispy marinated fried chicken, golden brown and full of flavor. A local favorite.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Fresh Juices" class="menu-img">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Avocado Juice</span>
+                            <span class="menu-price">QAR 12</span>
+                        </div>
+                        <p class="menu-desc">Thick, creamy avocado smoothie topped with honey and nuts. Pure energy in a cup.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Beef Burger" class="menu-img">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Khaleej Double Burger</span>
+                            <span class="menu-price">QAR 19</span>
+                        </div>
+                        <p class="menu-desc">Double patty burger with Gulf flavors, melted cheese, and fresh lettuce.</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc55449d0f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Karak Tea" class="menu-img">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Signature Karak Tea</span>
+                            <span class="menu-price">QAR 2</span>
+                        </div>
+                        <p class="menu-desc">The perfect blend of strong tea, milk, and spices. The best way to end your meal.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact" class="btn">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer Reviews</h2>
+                <span></span>
+            </div>
+            <div class="rating-summary">
+                <div class="big-rating">3.6</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Based on 266 Google Reviews</p>
+            </div>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="review-text">
+                        "One of the best places for a quick bite in Doha. Their Zinger Club is absolutely legendary and the prices are unbeatable. Great place to hang out with friends."
+                    </div>
+                    <div class="reviewer">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                        <span>Mohammed A.</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        "Good tea and nice location inside the sports club. The service can be a bit slow during weekends because it gets very crowded, but the food is worth the wait."
+                    </div>
+                    <div class="reviewer">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                        <span>Sarah J.</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        "Budget friendly restaurant. The chicken curry with poratta is my go-to breakfast. Simple, tasty, and clean."
+                    </div>
+                    <div class="reviewer">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                        <span>Rahul K.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Photo Gallery</h2>
+                <span></span>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1561758033-d8f19662cb23?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Tent Food 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Tent Food 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Tent Food 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tea Tent Food 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Us</h2>
+                <span></span>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>7G59+Q93, Al Arabi Sports Club,<br>Doha, Qatar</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+97459992270">+974 5999 2270</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Daily: 06:00 AM - 01:00 AM</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Map Embed -->
+                    <div style="width: 100%; height: 300px; border-radius: 10px; overflow: hidden; margin-top: 20px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.163346571596!2d51.5167!3d25.2667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE2JzAwLjEiTiA1McKwMzEnMDAuMSJF!5e0!3m2!1sen!2sqa!4v1614245678901!5m2!1sen!2sqa" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Tea Tent Restaurant Location">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your message or order inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Tea Tent Restaurant</h3>
+                <p>Taste the best of Doha.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Tea Tent Restaurant. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const navLinksItems = document.querySelectorAll('.nav-links li a');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Animate hamburger icon (optional swap to 'X')
+            const icon = hamburger.querySelector('i');
+            if(navLinks.classList.contains('active')){
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinksItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Smooth Scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Simple Form Handler (Mockup)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you, ${name}! Your message has been sent. We will contact you shortly.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
